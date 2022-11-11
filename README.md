@@ -1,2 +1,2 @@
 # Funnyium
-codehs funnyium
+whar?
