@@ -1,3 +1,2 @@
 # Funnyium
-dont
 codehs funnyium
