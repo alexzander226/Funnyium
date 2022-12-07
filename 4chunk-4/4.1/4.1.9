@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MaxMin
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number or 0 to quit: ");
+        int num = input.nextInt();
+        int lNum;
+        int sNum;
+        lNum = num;
+        sNum = num;
+        while(num != 0){
+            if(lNum < num && num != 0){
+                lNum = num;
+            }else if(sNum > num && num != 0){
+                sNum = num;
+            }
+            System.out.println("Results so far: ");
+            System.out.println("Largest number: " + lNum);
+            System.out.println("Smallest number: " + sNum);
+            System.out.println("Enter a number or 0 to quit: ");
+            num = input.nextInt();
+        }
+    }
+}
