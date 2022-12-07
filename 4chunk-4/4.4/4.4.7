@@ -1,0 +1,21 @@
+public class TreeOfStars
+{
+    public static void main(String[] args)
+    {
+       // Call makeATree 
+       makeATree();
+    }
+    public static void makeATree()
+    {
+        int j = 0;
+        for(int i = 0; i < 9; i++){
+            for(int spaces = 0; spaces > 0 - i; spaces--){
+                System.out.print(" ");
+            }
+            for(j = 0; j < 9 - i; j++){
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+}
