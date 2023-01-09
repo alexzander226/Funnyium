@@ -1,0 +1,45 @@
+public class DogTester
+{
+    public static void main(String[] args)
+    {
+        Dog karrel = new Dog("karrel", "blue healer", true);
+        Dog bingus = new Dog("bingus", "german shepard");
+        
+        System.out.println(bingus);
+        System.out.println(karrel);
+    }
+}
+----------------------------------------------------------------------
+public class Dog
+{
+    private String name;
+    private String breed;
+    private boolean hasShots;
+
+    public Dog(String n, String b, boolean s){
+        name = n;
+        breed = b;
+        hasShots = s;
+    }
+    public Dog(String n, String b){
+        name = n;
+        breed = b;
+        hasShots = false;
+    }
+
+    public String toString(){
+        String output = "Name: " + name;
+        output += "\nBreed: " + breed;
+        
+        if(hasShots)
+        {
+            output += "\nUp to date on shots!";
+        }
+        else
+        {
+            output += "\nMissing shots";
+        }
+        
+        return output;
+    }
+}
