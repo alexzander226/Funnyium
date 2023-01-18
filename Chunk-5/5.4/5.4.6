@@ -1,0 +1,43 @@
+public class DragonTester
+{
+    public static void main(String[] args)
+    {
+        Dragon nofic = new Dragon(8, ">");
+        System.out.println(nofic.getLevel());
+        System.out.println(nofic.getAttack());
+        System.out.println(nofic.fight());
+    }
+}
+----------------------------------------------------------------------
+public class Dragon 
+{
+    private String attack;
+    private int level;
+    
+    // Write the constructor here!
+    public Dragon(int lvl, String att){
+        level = lvl;
+        attack = att;
+    }
+    // Put getters here
+    public int getLevel(){
+        return level;
+    }
+    public String getAttack(){
+        return attack;
+    }
+    // Put other methods here
+    public String fight(){
+        String bub = "";
+        for(int i = 0; i < level; i++){
+            bub = bub + attack;
+        }
+        return bub;
+    }
+
+    // String representation of the object
+    public String toString()
+    {
+        return "Dragon is at level " + level + " and attacks with " + attack;
+    }
+}
