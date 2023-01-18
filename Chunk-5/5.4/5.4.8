@@ -1,0 +1,66 @@
+public class Meal{
+    private String meal;
+    private String time;
+    private int servings;
+    public Meal(String m, String t, int s){
+        meal = m;
+        time = t;
+        servings = s;
+    }
+    public String getName(){
+        return meal;
+    }
+    public String getCourse(){
+        return time;
+    }
+    public int getNumberOfServings(){
+        return servings;
+    }
+    public String toString(){
+        return meal + " (" + time + ")";
+    }
+}
+-----------------------------------------------------------------------------------------
+public class ChefTester
+{
+    public static void main(String[] args)
+    {
+        // Don't modify this part!
+        Meal macaroni = new Meal("Mac N Cheese", "Lunch", 8);
+        Chef alex = new Chef("Alex", "Juniors Cheesecake", macaroni);
+        
+        System.out.println(alex);
+        System.out.println(alex.getMealName());
+        
+        // Create your own Meal and Chef here:
+    }
+}
+-----------------------------------------------------------------------------------------
+public class Chef{
+    private String name;
+    private String resName;
+    private Meal bestMeal;
+    public Chef(String n, String r, Meal b){
+        name = n;
+        resName = r;
+        bestMeal = b;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getRestaurant(){
+        return resName;
+    }
+    public String getMealName(){
+        return bestMeal.getName();
+    }
+    public int getMealServings(){
+        return bestMeal.getNumberOfServings();
+    }
+    public String getMealCourse(){
+        return bestMeal.getCourse();
+    }
+    public String toString(){
+        return "Chef " +name+ " works at " + resName+ " and is best known for "+bestMeal;
+    }
+}
