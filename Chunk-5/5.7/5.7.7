@@ -1,0 +1,35 @@
+public class TeamTester
+{
+    public static void main(String[] args)
+    {
+        for(int i = 0; i < 7; i++){
+            Team j = new Team();
+            System.out.println("can join tournement: " + Team.tournamentReady());
+            System.out.println("team amount: " + (i + 1));
+        }
+    }
+}
+---------------------------------------------------
+public class Team
+{
+    // Static Variables
+    // ...
+    public static int totalTeams;
+    public static int minTeams = 6;
+    
+    // Public Methods
+    public Team() 
+    {
+        totalTeams++;
+        // Some code here...
+    }
+    public static boolean tournamentReady(){
+        if(totalTeams >= minTeams){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // Static Methods 
+    // ...
+}
